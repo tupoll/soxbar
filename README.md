@@ -67,3 +67,4 @@ lua5.4(versions may be 5.1 ... 5.3);
 rust1.92.0(gentoo:dev-lang/rust-bin);
 thunar4.20.6(optional);
 fish(versions can be any)
+ffmpeg6.1.2
