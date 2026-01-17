@@ -1,6 +1,10 @@
 # soxbar
 Gui for controlling the player of the SOX console program.
 
+To install sox, use the standard repository or github:
+```
+wget https://github.com/rbouqueau/SoX.git
+```
 
 We build soxbar and move the binary file:
 ```
