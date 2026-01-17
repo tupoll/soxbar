@@ -1,0 +1,10 @@
+[package]
+name = "soxbar"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+gtk4 = "0.9" # актуальная версия на 2026 год
+glib = "0.20"
+home = "0.5"
