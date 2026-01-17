@@ -52,8 +52,7 @@ sudo chown -R <имя пользователя>:<группа пользоват
 ```
 Thunar file manager:
 
-```
-Правка-особые>действия-добавляем иконку-текcт-команду:
+```Edit-Special>Actions-Add Icon-Text-Command:
 echo -n %f | /usr/bin/awk '{print $0}'>>~/tmp/playlist
 
 ```
