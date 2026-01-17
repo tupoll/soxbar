@@ -61,6 +61,11 @@ Edit-Special>Actions-Add Icon-Text-Command:
 echo -n %f | /usr/bin/awk '{print $0}'>>~/tmp/playlist
 
 ```
+To run from terminal:
+```
+soxbar
+```
+
 Dependencies:
 
 lua5.4(versions may be 5.1 ... 5.3);
