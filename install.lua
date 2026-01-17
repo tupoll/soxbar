@@ -1,0 +1,21 @@
+#!/usr/bin/lua
+
+cmd1 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/list_sox.rs")
+cmd2 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/play_sox_bin.rs")
+cmd3 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/setup_playlist.rs")
+cmd4 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/stop_sox.rs")
+cmd5 = string.format("cd $HOME/soxbar && %s", "cargo build --release")
+cmd6 = string.format("mv -f %s", "$HOME/soxbar/target/release/soxbar $HOME/.local/bin/soxbar")
+cmd7 = string.format("mkdir -p %s", "$HOME/.local/share/applications")
+cmd8 = string.format("cp -Rv %s", "$HOME/soxbar/'Sox Control Center 2026.desktop' $HOME/.local/share/applications")
+cmd9 = string.format("chmod a+x %s", "$HOME/.local/share/applications/'Sox Control Center 2026.desktop'")
+
+io.popen(cmd1)
+io.popen(cmd2)
+io.popen(cmd3)
+io.popen(cmd4)
+io.popen(cmd5)
+io.popen(cmd6)
+io.popen(cmd7)
+io.popen(cmd8)
+io.popen(cmd9)
