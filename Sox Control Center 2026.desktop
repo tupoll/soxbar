@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Sox Control Center 2026
+Exec=env "soxbar" 
+Type=Application
+Categories=Audio
+StartupNotify=false
+Path=$HOME/.local/bin/soxbar
+Icon=audio-x-generic
+Comment=soxbar 2026
+Terminal=false
