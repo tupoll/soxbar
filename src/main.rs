@@ -109,7 +109,9 @@ glib::timeout_add_local(std::time::Duration::from_secs(1), move || {
         .label("⏹️ СТОП")
         .css_classes(["destructive-action"])
         .build();
-    btn_stop.connect_clicked(|_| { let _ = Command::new("pkill").arg("-x").arg("play").status(); });
+    btn_stop.connect_clicked(|_| { let _ = Command::new("pkill").arg("-x").arg("play").status(); 
+	let _ = Command::new("stop_sox").status(); 
+	});
     
     let btn_setup_playlist = gtk::Button::builder()
         .label("📂 СОБРАТЬ ПЛЕЙЛИСТ-THUNAR")
