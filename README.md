@@ -40,6 +40,11 @@ In the window manager panel (ironbar), click stop ⏹️
 cmd = stop_sox
 
 ```
+As root, compile play_info.rs in /usr/local/bin:
+```
+sudo rustc --out-dir /usr/local/bin $HOME/soxbar/play_info.rs
+
+```
 
 To work, you need to create a directory in tmpfs and set permissions on it:
 ```
@@ -62,9 +67,11 @@ soxbar
 ```
 
 Dependencies:
-
+```
 lua5.4(versions may be 5.1 ... 5.3);
 rust1.92.0(gentoo:dev-lang/rust-bin);
 thunar4.20.6(optional);
 fish(versions can be any)
 ffmpeg6.1.2
+vte(gentoo:gui-libs/vte gtk4);
+```
