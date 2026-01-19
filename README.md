@@ -33,11 +33,6 @@ cp -Rv $HOME/soxbar/'Sox Control Center 2026.desktop' $HOME/.local/share/applica
 chmod 755 $HOME/.local/share/applications/'Sox Control Center 2026.desktop'
 
 ```
-To stop binary play, press two keys!
-```
-"НАЗАД (ИСТОРИЯ)" then "СТОП"
-
-```
 
 If you closed the application window, but it is running!:
 ```
