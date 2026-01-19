@@ -9,6 +9,7 @@ cmd6 = string.format("mv -f $HOME/soxbar/target/release/soxbar $HOME/.local/bin/
 cmd7 = string.format("mkdir -p %s", "$HOME/.local/share/applications")
 cmd8 = string.format("cp -Rv %s", "$HOME/soxbar/'Sox Control Center 2026.desktop' $HOME/.local/share/applications")
 cmd9 = string.format("chmod a+x %s", "$HOME/.local/share/applications/'Sox Control Center 2026.desktop'")
+cmd10 = string.format("sudo rustc --out-dir /usr/local/bin %s", "$HOME/soxbar/play_info.rs")
 
 io.popen(cmd1)
 io.popen(cmd2)
@@ -19,3 +20,4 @@ io.popen(cmd6)
 io.popen(cmd7)
 io.popen(cmd8)
 io.popen(cmd9)
+io.popen(cmd10)
