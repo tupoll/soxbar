@@ -65,7 +65,7 @@ fn main() {
                 
                 // Вывод: Зеленый текст и синее время
                 print!(
-                    "\r\x1b[32mИМЯ: {}\x1b[0m \x1b[34m{:02}:{:02}\x1b[0m\x1b[K", 
+                    "\r\x1b[32mИМЯ 🎶: {}\x1b[0m \x1b[34m{:02}:{:02}\x1b[0m\x1b[K", 
                     view, 
                     elapsed / 60, elapsed % 60
                 );
@@ -81,7 +81,7 @@ fn main() {
             // Если play не запущен
             start_time = None;
             current_name.clear();
-            print!("\r\x1b[31mSTOPPED: play\x1b[0m\x1b[K");
+            print!("\r\x1b[31mSTOPPED ⏹️: play\x1b[0m\x1b[K");
         }
 
         // ОБЯЗАТЕЛЬНО ДЛЯ GTK/VTE
