@@ -33,7 +33,7 @@ fn get_name_from_file(path: &str) -> String {
 
 fn main() {
     // ДИНАМИЧЕСКИЙ ПУТЬ К $HOME/tmp/sox/name
-    let home = std::env::var("HOME").unwrap_or_else(|_| "/home/tupoll".to_string());
+    let home = std::env::var("HOME").unwrap_or_else(|_| "/home/$USER".to_string());
     let file_path = format!("{}/tmp/sox/name", home);
     
     let mut current_name = String::new();
@@ -86,6 +86,6 @@ fn main() {
 
         // ОБЯЗАТЕЛЬНО ДЛЯ GTK/VTE
         io::stdout().flush().unwrap();
-        thread::sleep(Duration::from_millis(150));
+        thread::sleep(Duration::from_millis(400));
     }
 }
