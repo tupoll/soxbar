@@ -15,11 +15,11 @@ mv -f $HOME/soxbar/target/release/soxbar $HOME/.local/bin/soxbar
 ```
 We collect the remaining binaries:
 ```
-rustc --out-dir $HOME/.local/bin $HOME/soxbar/list_sox.rs
-rustc --out-dir $HOME/.local/bin $HOME/soxbar/play_sox_bin.rs
-rustc --out-dir $HOME/.local/bin $HOME/soxbar/setup_playlist.rs
-rustc --out-dir $HOME/.local/bin $HOME/soxbar/stop_sox.rs
-
+mv -f $HOME/soxbar/target/release/list_sox $HOME/.local/bin/list_sox
+mv -f $HOME/soxbar/target/release/play_sox_bin $HOME/.local/bin/play_sox_bin
+mv -f $HOME/soxbar/target/release/setup_playlist $HOME/.local/bin/setup_playlist
+mv -f $HOME/soxbar/target/release/stop_sox $HOME/.local/bin/stop_sox
+mv -f $HOME/soxbar/target/release/soxbar $HOME/.local/bin/soxbar
 ```
 Script for automatic file assembly and movement:
 ```
