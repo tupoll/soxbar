@@ -6,3 +6,23 @@ edition = "2024"
 [dependencies]
 gtk4 = "0.10"
 vte4 = "0.9"
+
+[[bin]]
+name = "list_sox"
+path = "src/list_sox.rs"
+
+[[bin]]
+name = "play_sox_bin"
+path = "src/play_sox_bin.rs"
+
+[[bin]]
+name = "play_info"
+path = "src/play_info.rs"
+
+[[bin]]
+name = "setup_playlist"
+path = "src/setup_playlist.rs"
+
+[[bin]]
+name = "stop_sox"
+path = "src/stop_sox.rs"
