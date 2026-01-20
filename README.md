@@ -42,7 +42,7 @@ cmd = stop_sox
 ```
 As root, compile play_info.rs in /usr/local/bin:
 ```
-sudo rustc --out-dir /usr/local/bin $HOME/soxbar/play_info.rs
+sudo mv -f $HOME/soxbar/target/release/play_info /usr/local/bin/play_info
 
 ```
 
