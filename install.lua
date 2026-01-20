@@ -1,15 +1,15 @@
 #!/usr/bin/lua
 
-cmd1 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/list_sox.rs")
-cmd2 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/play_sox_bin.rs")
-cmd3 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/setup_playlist.rs")
-cmd4 = string.format("rustc --out-dir $HOME/.local/bin %s", "$HOME/soxbar/stop_sox.rs")
-cmd5 = string.format("cd $HOME/soxbar && %s", "cargo build --release")
+cmd1 = string.format("cd $HOME/soxbar && %s", "cargo build --release")
+cmd2 = string.format("mv -f $HOME/soxbar/target/release/list_sox $HOME/.local/bin")
+cmd3 = string.format("mv -f $HOME/soxbar/target/release/play_sox_bin $HOME/.local/bin/play_sox_bin")
+cmd4 = string.format("mv -f $HOME/soxbar/target/release/setup_playlist $HOME/.local/bin/setup_playlist")
+cmd5 = string.format("mv -f $HOME/soxbar/target/release/stop_sox $HOME/.local/bin/stop_sox")
 cmd6 = string.format("mv -f $HOME/soxbar/target/release/soxbar $HOME/.local/bin/soxbar")
 cmd7 = string.format("mkdir -p %s", "$HOME/.local/share/applications")
 cmd8 = string.format("cp -Rv %s", "$HOME/soxbar/'Sox Control Center 2026.desktop' $HOME/.local/share/applications")
 cmd9 = string.format("chmod a+x %s", "$HOME/.local/share/applications/'Sox Control Center 2026.desktop'")
-cmd10 = string.format("sudo rustc --out-dir /usr/local/bin %s", "$HOME/soxbar/play_info.rs")
+cmd10 = string.format("sudo mv -f $HOME/soxbar/target/release/play_info /usr/local/bin/play_info")
 
 io.popen(cmd1)
 io.popen(cmd2)
