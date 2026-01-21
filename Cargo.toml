@@ -26,3 +26,11 @@ path = "src/setup_playlist.rs"
 [[bin]]
 name = "stop_sox"
 path = "src/stop_sox.rs"
+
+[[bin]]
+name = "helper"
+path = "src/helper.rs"
+
+[[bin]]
+name = "soxbar-setup"
+path = "src/soxbar-setup.rs"
