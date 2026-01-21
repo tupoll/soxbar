@@ -9,4 +9,3 @@ Categories=AudioVideo;
 StartupNotify=false
 Icon=audio-x-generic
 Comment=soxbar 2026
-Terminal=false
