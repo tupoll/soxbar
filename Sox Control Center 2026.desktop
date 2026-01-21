@@ -1,10 +1,13 @@
 [Desktop Entry]
 Name=Sox Control Center 2026
-Exec=env "soxbar" 
+
 Type=Application
-Categories=Audio
+TryExec=soxbar
+Exec=soxbar -- %U
+Terminal=false
+Categories=Audio;
 StartupNotify=false
-Path=$HOME/.local/bin/soxbar
+Path=$HOME/.local/bin/soxbar;/usr/bin/soxbar;
 Icon=audio-x-generic
 Comment=soxbar 2026
 Terminal=false
