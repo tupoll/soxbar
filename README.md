@@ -5,6 +5,12 @@ To install sox, use the standard repository or github:
 ```
 wget https://github.com/rbouqueau/SoX.git
 ```
+Install using the setup program (don't forget to enter the root password when asked):
+```
+rustc --out-dir $HOME/.local/bin $HOME/soxbar/src/soxbar-setup.rs
+soxbar-setup
+
+```
 
 We build soxbar and move the binary file:
 ```
@@ -15,18 +21,14 @@ mv -f $HOME/soxbar/target/release/soxbar $HOME/.local/bin/soxbar
 ```
 We collect the remaining binaries:
 ```
-mv -f $HOME/soxbar/target/release/list_sox $HOME/.local/bin/list_sox
-mv -f $HOME/soxbar/target/release/play_sox_bin $HOME/.local/bin/play_sox_bin
-mv -f $HOME/soxbar/target/release/setup_playlist $HOME/.local/bin/setup_playlist
-mv -f $HOME/soxbar/target/release/stop_sox $HOME/.local/bin/stop_sox
-mv -f $HOME/soxbar/target/release/soxbar $HOME/.local/bin/soxbar
-```
-Script for automatic file assembly and movement:
-```
-cd $HOME/soxbar
-lua install.lua
+rustc --out-dir $HOME/.local/bin $HOME/soxbar/src/list_sox.rs
+rustc --out-dir $HOME/.local/bin $HOME/soxbar/src/play_sox_bin.rs
+rustc --out-dir $HOME/.local/bin $HOME/soxbar/src/setup_playlist.rs
+rustc --out-dir $HOME/.local/bin $HOME/soxbar/src/stop_sox.rs
+rustc --out-dir $HOME/.local/bin $HOME/soxbar/src/soxbar-setup.rs
 
 ```
+
 Copy the "Sox Control Center 2026" launch icon and grant it permission to run:
 ```
 cp -Rv $HOME/soxbar/'Sox Control Center 2026.desktop' $HOME/.local/share/applications
@@ -40,18 +42,18 @@ In the window manager panel (ironbar), click stop ⏹️
 cmd = stop_sox
 
 ```
-As root, compile play_info.rs in /usr/local/bin:
+As root, compile play_info.rs helper.rs in /usr/local/bin:
 ```
-sudo mv -f $HOME/soxbar/target/release/play_info /usr/local/bin/play_info
+sudo rustc --out-dir /usr/local/bin $HOME/soxbar/src/play_info.rs
+sudo rustc --out-dir /usr/local/bin $HOME/soxbar/src/helper.rs
 
 ```
-
 To work, you need to create a directory in tmpfs and set permissions on it:
 ```
 
 sudo mkdir -p /var/tmp/wm
 sudo echo "tmpfs  /var/tmp/wm  tmpfs size=10M  0 0">>/etc/fstab
-sudo chown -R <имя пользователя>:<группа пользователя> /var/tmp/sway
+sudo chown -R <username>:<usergroup> /var/tmp/wm
 
 ```
 Thunar file manager:
