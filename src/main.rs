@@ -32,7 +32,7 @@ impl PlayInfoWidget {
         imp.terminal.spawn_async(
             vte::PtyFlags::DEFAULT,
             None,
-            &["/usr/bin/fish", "-c", "clear; exec /usr/local/bin/play_info"],
+            &["/usr/bin/fish", "-c", "clear; exec /usr/bin/play_info"],
             &[],
             gtk::glib::SpawnFlags::DEFAULT, 
             || {},
